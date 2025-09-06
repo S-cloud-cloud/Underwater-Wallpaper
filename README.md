@@ -6,7 +6,7 @@ Integrate the code or the website (https://s-cloud-cloud.github.io/Underwater-Wa
 Enjoy!
 
 <h2>Creator's note :</h3>
-Addition of cute creates and soothing underwater feel to a dynamic wallpaper!!!
+Addition of cute creatures and soothing underwater feel to a dynamic wallpaper!!!
 Fishes and turtles swimming around to give you company while you hustle.
 <h3>Featuring : Patrick the star fish!! from spongebob</h3>
 
