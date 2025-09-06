@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Underwater Emoji Live Wallpaper</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #006994, #003f5c);
+            height: 100vh;
+            width: 100vw;
+            font-size: 2rem;
+        }
+
+        .creature {
+            position: absolute;
+            font-size: 2.5rem;
+            animation-timing-function: linear;
+        }
+
+        .fish {
+            animation: swimLeft 30s linear infinite;
+        }
+
+        .jellyfish {
+            animation: floatUp 25s ease-in-out infinite;
+        }
+
+        .octopus {
+            animation: sway 5s ease-in-out infinite alternate;
+            width: 180px;
+            height: 180px;
+            position: absolute;
+        }
+
+        .swimmer {
+            animation: swimLeft 42s linear infinite;
+            width: 200px;
+            height: auto;
+            transform: scaleX(-1);
+        }
+
+        .duck1 {
+            animation: swimLeft 44s linear infinite;
+            width: 45px;
+            height: auto;
+            transform: scaleX(-1);
+        }
+        
+        .duck2 {
+            animation: driftLeft 20s linear infinite;
+            width: 45px;
+            height: auto;
+            transform: scaleX(-1);
+        }
+
+      
+        .turtle {
+            animation: floatUp 45s linear infinite;
+            width: 140px;
+            height: 200px;
+            
+        }
+
+        .seaweed {
+            animation: sway 5s ease-in-out infinite alternate;
+            bottom: 5%;
+            width: 310;
+            height: 364;
+            position: absolute;
+            transform-origin: bottom center;
+        }
+
+         .seaweed2 {
+            animation: sway 5s ease-in-out infinite alternate;
+            bottom: 5%;
+            width: 100px;
+            height: auto;
+            position: absolute;
+            transform-origin: bottom center;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: bubbleUp 15s linear infinite;
+        }
+
+        .cafe-container {
+            position: absolute;
+            bottom: 5%;
+            left: 82%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 450px;
+            background-image: url('assets/cafe.png'); /* Local image path */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .patrick-server {
+            width: 150px;
+            height: 170px;
+            position: absolute;
+            bottom: 5%;
+            right: 35px;
+            transform: scaleX(-1);
+        }
+        
+        .burger {
+            width: 100px;
+            height: 140px;
+            position: absolute;
+            bottom: 5%;
+            left: 50px;
+            transform: scaleX(-1);
+        }
+
+        .crab {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            bottom: 5%;
+            
+        }
+
+        @keyframes swimLeft {
+            0% { left: 110%; transform: scaleX(1); }
+            49% { transform: scaleX(1); }
+            50% { left: -10%; transform: scaleX(-1); }
+            99% { transform: scaleX(-1); }
+            100% { left: 110%; transform: scaleX(1); }
+        }
+
+        @keyframes floatUp {
+            from { bottom: -5%; }
+            to { bottom: 105%; }
+        }
+
+        @keyframes driftLeft {
+            from { left: 100%; }
+            to { left: -10%; }
+        }
+
+        @keyframes sway {
+            from { transform: rotate(2deg); }
+            to { transform: rotate(-2deg); }
+        }
+
+        @keyframes bubbleUp {
+            0% {
+                bottom: 0;
+                opacity: 0.2;
+                transform: translateX(0);
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                transform: translateX(calc((Math.random() - 0.5) * 50px));
+            }
+        }
+
+        @keyframes walkSideways {
+            0% { left: 0%; }
+            50% { left: 90%; }
+            100% { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="creature fish" style="top: 25%; left: 115%;">🐠</div>
+    <div class="creature fish" style="top: 35%; left: 120%; animation-delay: 10s;">🐟</div>
+    <div class="creature fish" style="top: 45%; left: 125%; animation-delay: 15s;">🐡</div>
+    <div class="creature fish" style="top: 45%; left: 125%; animation-delay: 15s;">🐠</div>
+    <div class="creature fish" style="top: 45%; left: 125%; animation-delay: 15s;">🐡</div>
+
+
+    <div class="creature jellyfish" style="left: 20%; animation-delay: 3s;">🪼</div>
+    <div class="creature jellyfish" style="left: 50%; animation-delay: 0s;">🪼</div>
+    <div class="creature jellyfish" style="left: 85%; animation-delay: 0s;">🪼</div>
+
+    <img src="assets/turtle1.gif" class="creature turtle" style="bottom: 10%; left: 25%; animation-delay: 0.8s;" alt="turtle">
+    <img src="assets/octopus.gif" class="creature octopus" style="bottom: 9%; left: 0%;" alt="octopus">
+    
+
+
+    <img src="assets/swimming-person.gif" class="creature swimmer" style="top: 1%; left: 110%; animation-delay: 1s;;" alt="Swimming Person">
+    <img src="assets/duck1.png" class="creature duck1" style="top: 14%; left: 130%; animation-delay: 2s;" alt="duck1">
+    <img src="assets/duck1.png" class="creature duck1" style="top: 14%; left: 130%; animation-delay: 2.5s;" alt="duck1">
+
+
+    <img src="assets/seaweed2.gif" class="seaweed2" style="left: 0%;" alt="Seaweed">
+    <img src="assets/seaweed1.png" class="seaweed" style="left: 7%;" alt="Seaweed">
+    <img src="assets/seaweed1.png" class="seaweed" style="left: 10%;" alt="Seaweed">
+
+    <img src="assets/seaweed1.png" class="seaweed" style="left: 15%; animation-delay: 1s;" alt="Seaweed">
+    <img src="assets/seaweed1.png" class="seaweed" style="left: 25%; animation-delay: 0.5s;" alt="Seaweed">
+    <img src="assets/seaweed2.gif" class="seaweed2" style="left: 35%; animation-delay: 1.5s;" alt="Seaweed">
+    <img src="assets/seaweed1.png" class="seaweed" style="left: 45%; animation-delay: 0.2s;" alt="Seaweed">
+    <img src="assets/seaweed2.gif" class="seaweed2" style="left: 80%; animation-delay: 0.3s;" alt="Seaweed">
+    <img src="assets/seaweed2.gif" class="seaweed2" style="left: 89%; animation-delay: 0.3s;" alt="Seaweed">
+    <img src="assets/seaweed2.gif" class="seaweed2" style="left: 92%; animation-delay: 0.8s;" alt="Seaweed">
+    <img src="assets/seaweed1.png" class="seaweed2" style="left: 98%;" alt="Seaweed">
+
+
+    <div class="cafe-container">
+        <img src="assets/patrick_coffee.gif" class="patrick-server"  alt="patrick_coffee">
+        <img src="assets/seaweed2.gif" class="seaweed2" style="left: 30%; animation-delay: 0.8s;" alt="Seaweed">
+        <img src="assets/burger.png" class="burger" style="left: 30%;" alt="creature eating burger">  
+        <img src="assets/crab1.gif" class="creature crab" style="right: 75%; animation-delay: 0.8s; ;" alt="crab">
+
+    </div>
+
+    <script>
+        for (let i = 0; i < 150; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            const size = Math.random() * 35 + 5;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.animationDuration = `${10 + Math.random() * 10}s`;
+            bubble.style.animationDelay = `${Math.random() * 15}s`;
+            document.body.appendChild(bubble);
+        }
+    </script>
+</body>
+</html>
